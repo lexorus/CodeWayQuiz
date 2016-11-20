@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B197592A1DE1C6F400D11536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19759291DE1C6F400D11536 /* ViewController.swift */; };
+		B197592C1DE1C75400D11536 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197592B1DE1C75400D11536 /* NavigationController.swift */; };
 		B1ECA22E1DD88AAF00CE7F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ECA22D1DD88AAF00CE7F01 /* AppDelegate.swift */; };
 		B1ECA2331DD88AAF00CE7F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1ECA2311DD88AAF00CE7F01 /* Main.storyboard */; };
 		B1ECA2351DD88AAF00CE7F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1ECA2341DD88AAF00CE7F01 /* Assets.xcassets */; };
 		B1ECA2381DD88AAF00CE7F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1ECA2361DD88AAF00CE7F01 /* LaunchScreen.storyboard */; };
+		B1ECA2411DD8C97800CE7F01 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ECA2401DD8C97800CE7F01 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B19759291DE1C6F400D11536 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B197592B1DE1C75400D11536 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B1ECA22A1DD88AAF00CE7F01 /* CodeWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1ECA22D1DD88AAF00CE7F01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1ECA2321DD88AAF00CE7F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1ECA2341DD88AAF00CE7F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1ECA2371DD88AAF00CE7F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1ECA2391DD88AAF00CE7F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1ECA2401DD8C97800CE7F01 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B19759281DE1C6C400D11536 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B19759291DE1C6F400D11536 /* ViewController.swift */,
+				B197592B1DE1C75400D11536 /* NavigationController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		B1ECA2211DD88AAF00CE7F01 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +69,21 @@
 			children = (
 				B1ECA22D1DD88AAF00CE7F01 /* AppDelegate.swift */,
 				B1ECA2311DD88AAF00CE7F01 /* Main.storyboard */,
+				B19759281DE1C6C400D11536 /* Core */,
+				B1ECA23F1DD8C93F00CE7F01 /* ViewControllers */,
 				B1ECA2341DD88AAF00CE7F01 /* Assets.xcassets */,
 				B1ECA2361DD88AAF00CE7F01 /* LaunchScreen.storyboard */,
 				B1ECA2391DD88AAF00CE7F01 /* Info.plist */,
 			);
 			path = CodeWay;
+			sourceTree = "<group>";
+		};
+		B1ECA23F1DD8C93F00CE7F01 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1ECA2401DD8C97800CE7F01 /* QuizViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B197592A1DE1C6F400D11536 /* ViewController.swift in Sources */,
+				B197592C1DE1C75400D11536 /* NavigationController.swift in Sources */,
 				B1ECA22E1DD88AAF00CE7F01 /* AppDelegate.swift in Sources */,
+				B1ECA2411DD8C97800CE7F01 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +324,7 @@
 				B1ECA23E1DD88AAF00CE7F01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
