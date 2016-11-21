@@ -11,7 +11,7 @@ import UIKit
 struct ViewController<Result> {
     private let build: ( @escaping (Result) -> ()) -> UIViewController
     
-    init(build: @escaping ( @escaping (Result) -> ()) -> UIViewController) {
+    init(_ build: @escaping ( @escaping (Result) -> ()) -> UIViewController) {
         self.build = build
     }
     
@@ -21,21 +21,21 @@ struct ViewController<Result> {
     
 }
 
-func map<A,B>(vc: ViewController<A>, f: @escaping (A) -> B) -> ViewController<B> {
-    return ViewController { callback in
-        return vc.run { y in
-            callback(f(y))
-        }
-    }
-}
-
-extension UIViewController {
-    func presentModal<A>(screen: NavigationController<A>, callback: @escaping (A) -> ()) {
-        let vc = screen.build { [unowned self] x, nc in
-            callback(x)
-            self.dismiss(animated: true, completion: nil)
-        }
-        vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        present(vc, animated: true, completion: nil)
-    }
-}
+//func map<A,B>(vc: ViewController<A>, f: @escaping (A) -> B) -> ViewController<B> {
+//    return ViewController { callback in
+//        return vc.run { y in
+//            callback(f(y))
+//        }
+//    }
+//}
+//
+//extension UIViewController {
+//    func presentModal<A>(screen: NavigationController<A>, callback: @escaping (A) -> ()) {
+//        let vc = screen.build { [unowned self] x, nc in
+//            callback(x)
+//            self.dismiss(animated: true, completion: nil)
+//        }
+//        vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//        present(vc, animated: true, completion: nil)
+//    }
+//}

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quiz View Controller-->
+        <!--Question-->
         <scene sceneID="PcH-Xi-PQz">
             <objects>
                 <viewController storyboardIdentifier="QuizViewController" id="shw-xA-JYo" customClass="QuizViewController" customModule="CodeWay" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,21 +22,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="How was the conference? (Please indicate the number between 0 and 10 that represents your satisfaction)" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EFW-tk-rYZ">
-                                <rect key="frame" x="16" y="79" width="343" height="130"/>
+                                <rect key="frame" x="16" y="79" width="343" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="dvO-aH-ZzN">
-                                <rect key="frame" x="16" y="217" width="343" height="30"/>
+                                <rect key="frame" x="16" y="285" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIA-ou-pWc">
-                                <rect key="frame" x="137" y="255" width="101" height="58"/>
+                                <rect key="frame" x="137" y="323" width="101" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="NEXT"/>
@@ -47,6 +47,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Question" id="rnp-RX-6z6"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="answerTextField" destination="dvO-aH-ZzN" id="UWW-MZ-cCM"/>
                         <outlet property="quizTextView" destination="EFW-tk-rYZ" id="bOJ-qX-e3f"/>
@@ -54,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVM-BM-odX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794.39999999999998" y="39.130434782608695"/>
+            <point key="canvasLocation" x="1681" y="53"/>
         </scene>
     </scenes>
 </document>
