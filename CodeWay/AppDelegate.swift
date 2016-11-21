@@ -15,10 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let quizFlow = Quiz().flow()
-        window?.rootViewController = quizFlow.run()
+        window?.rootViewController = quizApp()
         
         return true
     }
+    
+    private func quizApp() -> UIViewController {
+        let quizFlow = Quiz().flow()
+        
+        let startInterface = startViewController(startButtonName: "Start Quiz")
+        return startInterface.run { controller in
+            controller.presentModal(flow: quizFlow) { _ in }
+        }
+    }
+    
 }
 

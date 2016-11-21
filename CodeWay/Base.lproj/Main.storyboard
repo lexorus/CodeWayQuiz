@@ -58,5 +58,37 @@
             </objects>
             <point key="canvasLocation" x="1681" y="53"/>
         </scene>
+        <!--Start View Controller-->
+        <scene sceneID="0O0-8z-hIL">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="gQ4-wb-5AB" customClass="StartViewController" customModule="CodeWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X32-3Z-CKg"/>
+                        <viewControllerLayoutGuide type="bottom" id="FYV-AM-gmb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dlG-Cf-4bT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLz-C6-I7t">
+                                <rect key="frame" x="53" y="285" width="268" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start Quiz"/>
+                                <connections>
+                                    <action selector="startButtonWasPressed:" destination="gQ4-wb-5AB" eventType="touchUpInside" id="Sbn-8H-j3Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="fLz-C6-I7t" id="Bmm-Mb-qFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4H4-QZ-z1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="53"/>
+        </scene>
     </scenes>
 </document>

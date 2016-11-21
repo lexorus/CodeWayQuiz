@@ -15,27 +15,27 @@ struct ViewController<Result> {
         self.build = build
     }
     
-    func run(f: @escaping (Result) -> ()) -> UIViewController {
-        return build(f)
+    func run(completion: @escaping (Result) -> ()) -> UIViewController {
+        return build(completion)
     }
     
 }
 
-//func map<A,B>(vc: ViewController<A>, f: @escaping (A) -> B) -> ViewController<B> {
-//    return ViewController { callback in
-//        return vc.run { y in
-//            callback(f(y))
-//        }
-//    }
-//}
-//
-//extension UIViewController {
-//    func presentModal<A>(screen: NavigationController<A>, callback: @escaping (A) -> ()) {
-//        let vc = screen.build { [unowned self] x, nc in
-//            callback(x)
-//            self.dismiss(animated: true, completion: nil)
-//        }
-//        vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//        present(vc, animated: true, completion: nil)
-//    }
-//}
+extension UIViewController {
+    func presentModal<Result>(flow: NavigationController<Result>, callback: @escaping (Result) -> ()) {
+        let viewController = flow.build { [unowned self] result, navigationController in
+            callback(result)
+            self.dismiss(animated: true, completion: nil)
+        }
+        viewController.modalTransitionStyle = .coverVertical
+        present(viewController, animated: true, completion: nil)
+    }
+}
+
+func map<A,B>(viewConroller: ViewController<A>, transform: @escaping (A) -> B) -> ViewController<B> {
+    return ViewController { callback in
+        return viewConroller.run { result in
+            callback(transform(result))
+        }
+    }
+}

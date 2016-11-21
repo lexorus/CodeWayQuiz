@@ -11,22 +11,21 @@ typealias QuizQuestion = (question: String, answer: String?)
 final class Quiz {
     
     private var questions: [QuizQuestion] = [
-        ("question1", nil),
-        ("question2", nil),
-        ("question3", nil),
-        ("question4", nil)
+        ("What is your full name?", nil),
+        ("How was the conference?", nil),
+        ("How was the speakers?", nil),
+        ("How does it work???\n🤔", nil)
     ]
     
-    func turn(unsweredQuestion: QuizQuestion) -> ViewController<QuizQuestion> {
-        let indexOfObject = questions.find { $0.question == unsweredQuestion.question }
+    func turn(answeredQuestion: QuizQuestion) -> ViewController<QuizQuestion> {
+        let indexOfObject = questions.find { $0.question == answeredQuestion.question }
         if let index = indexOfObject {
-            questions[index] = unsweredQuestion
+            questions[index] = answeredQuestion
         }
         let unansweredQuestionFilter: (QuizQuestion) -> Bool = { $0.answer == nil }
         if let unansweredQuestion = questions.filter(unansweredQuestionFilter).first {
             return quizViewController(question: unansweredQuestion)
         } else {
-            print(questions)
             return quizViewController(question: ("Thank you for your answers", nil))
         }
     }
